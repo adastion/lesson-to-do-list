@@ -3,6 +3,7 @@ import { data, subscribe } from "./src/data/data.js";
 
 function refreshUI() {
   const rootElement = document.getElementById("root");
+  rootElement.classList.add("bg-secondary");
   rootElement.innerHTML = "";
 
   const todolistElement = Todolist(data);

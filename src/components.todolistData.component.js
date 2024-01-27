@@ -6,12 +6,19 @@ import { data, openeDialog } from "./data/data.js";
 
 export function Todolist(todolistData) {
   const containerElement = document.createElement("div");
+  containerElement.classList.add(
+    "container",
+    "bg-dark-subtle",
+    "text-light-emphasi",
+    "p-3"
+  );
 
   const headerEelment = Header(todolistData.todolist.title);
   const tasksListElement = TasksList(todolistData.todolist.tasks);
   const buttonsPanelElement = Button("Add task", () => {
     openeDialog();
   });
+  buttonsPanelElement.setAttribute("data-bs-toggle", "modal");
   const addTaskDialogElement = DialogWindow();
   addTaskDialogElement.open = data.todolist.dialogWindow;
 

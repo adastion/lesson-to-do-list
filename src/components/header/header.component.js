@@ -1,6 +1,7 @@
 export function Header(dataTitle) {
   const containerElement = document.createElement("header");
   const titleElement = document.createElement("h1");
+  titleElement.classList.add("h1")
   titleElement.textContent = dataTitle;
 
   containerElement.append(titleElement);
