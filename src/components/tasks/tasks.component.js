@@ -1,3 +1,4 @@
+import { getDataFromPlaceholder } from "../../data/get_data.js";
 import { Task } from "./task/task.component.js";
 
 export function TasksList(tasks) {
@@ -7,6 +8,8 @@ export function TasksList(tasks) {
     const task = tasks[i];
     containerElement.append(Task(task.title, task.id));
   }
+
+  getDataFromPlaceholder(containerElement)
 
   return containerElement;
 }

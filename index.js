@@ -1,8 +1,8 @@
 import { Todolist } from "./src/components.todolistData.component.js";
 import { data, subscribe } from "./src/data/data.js";
 
+const rootElement = document.getElementById("root");
 function refreshUI() {
-  const rootElement = document.getElementById("root");
   rootElement.classList.add("bg-secondary");
   rootElement.innerHTML = "";
 
