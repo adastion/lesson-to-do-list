@@ -45,13 +45,15 @@ export function deleteTask(taskId) {
 }
 
 export function addTask(nameTask) {
-  const newTask = {
-    id: crypto.randomUUID(),
-    title: nameTask,
-  };
-
-  data.todolist.tasks.push(newTask);
-  _notifiSubscribe();
+  if (nameTask) {
+    const newTask = {
+      id: crypto.randomUUID(),
+      title: nameTask,
+    };
+    
+    data.todolist.tasks.push(newTask);
+    _notifiSubscribe();
+  }
 }
 
 // state

@@ -55,3 +55,7 @@ dialog {
   opacity: 0.8;
   color: var(--bs-dark-bg-subtle);
 }
+
+.not-completed {
+  text-decoration: line-through;
+}
